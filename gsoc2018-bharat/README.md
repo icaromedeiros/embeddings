@@ -32,10 +32,10 @@ $ wget -c http://mattmahoney.net/dc/enwik9.zip -P data
 $ unzip data/enwik9.zip -d data
 ```
 
-This is a raw Wikipedia dump and needs to be cleaned because it contains a lot of HTML/XML data. There are two ways to pre-process it. Here, I am using the Wiki Extractor script available [here](https://github.com/attardi/wikiextractor/blob/master/WikiExtractor.py) bundled with FastText to pre-process it.
+This is a raw Wikipedia dump and needs to be cleaned because it contains a lot of HTML/XML data. There are two ways to pre-process it. Here, I am using the Wiki Extractor script available [here](https://github.com/attardi/wikiextractor/blob/master/wikiextractor/WikiExtractor.py) bundled with FastText to pre-process it.
 
 ```shell
-$ wget -c https://github.com/attardi/wikiextractor/blob/master/WikiExtractor.py -P src
+$ wget -c https://github.com/attardi/wikiextractor/blob/master/wikiextractor/WikiExtractor.py -P src
 $ python src/WikiExtractor.py data/enwik9 -l -o data/output
 $ python src/WikiExtractor.py data/enwik9 -o data/text
 ```
@@ -114,3 +114,4 @@ $ python src/evaluate.py {annotated_abstract_file}
 ### Important Links to track the progress
 
 I wrote a [blog](https://bharatsuri.blogspot.com/) during the program and you can have a look at the entire progress [here](https://bharatsuri.blogspot.com/p/my-progress.html). I have also included the results from plotting the embeddings, and the evaluation metric in the progress page.
+
